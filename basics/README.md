@@ -6,3 +6,4 @@ This folder contains scripts that explain shell basics.
 3-listfiles - Lists content of current directory in long format 
 4-listmorefiles - Lists all the files plus the hidden ones in long format.
 5-listfilesdigitonly - Lists all files plus the hidden ones in long format with numeric user/group IDs.
+6-firstdirectory - Creates a directory named 'my_first_directory' in /tmp/ directory
