@@ -5,3 +5,4 @@ This folder contains scripts that explain shell basics.
 2-bring_me_home -  takes you to your home directory.
 3-listfiles - Lists content of current directory in long format 
 4-listmorefiles - Lists all the files plus the hidden ones in long format.
+5-listfilesdigitonly - Lists all files plus the hidden ones in long format with numeric user/group IDs.
