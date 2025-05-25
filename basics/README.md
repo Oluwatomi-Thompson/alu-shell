@@ -11,3 +11,4 @@ This folder contains scripts that explain shell basics.
 8-firstdelete - Deletes the file betty from /tmp/my_first_directory
 9-firstdirdeletion - Deletes the directory /tmp/my_first_directory
 10-back - Changes the working directory to the previous one
+11-lists - Lists all files plus the hidden ones in ., .., and /boot in long format
