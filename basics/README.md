@@ -9,3 +9,4 @@ This folder contains scripts that explain shell basics.
 6-firstdirectory - Creates a directory named 'my_first_directory' in /tmp/ directory
 7-movethatfile - Moves the file betty from /tmp/ to /tmp/my_first_directory/
 8-firstdelete - Deletes the file betty from /tmp/my_first_directory
+9-firstdirdeletion - Deletes the directory /tmp/my_first_directory
