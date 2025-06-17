@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
-# Description: Groups visitors by IP and HTTP status code from access.log and sorts them by occurrence
+# Description: Groups and counts IP and HTTP code combinations from a valid Apache access.log file
 
-awk '{print $1, $9}' access.log | sort | uniq -c | sort -nr
+# Exit silently if the log file is empty or doesn't exist
+[ ! -s access.log ] && exit 0
+
+# Use awk to extract valid IP and status code, then sort, count, and order them
+awk '{
+  if ($1 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/ && $9 ~ /^[0-9]+$/) {
+    print $1, $9
+  }
+}' access.log | sort | uniq -c | sort -nr
