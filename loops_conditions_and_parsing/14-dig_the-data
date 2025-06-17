@@ -1,13 +1,3 @@
 #!/usr/bin/env bash
-# Extract and count IP and status code from a well-formatted Apache log
-
-# Exit silently if the file is empty or missing
-[ ! -s access.log ] && exit 0
-
-# Only process lines that have a valid IP in the first field and a status code in the 9th
-awk '
-{
-  # Ensure the log line has at least 9 fields and proper IP and status code
-  if (NF >= 9 && $1 ~ /^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/ && $9 ~ /^[0-9]{3}$/)
-    print $1, $9
-}' access.log | sort | uniq -c | sort -nr
+#This script groups visitors by IP and HTTP status code, ordered by occurrence
+awk '{print $1 " " $9}' apache-access.log | sort | uniq -c | sort -rn
